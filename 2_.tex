@@ -1,0 +1,190 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\begin{document}
+
+LaTex document for LAFF class notes
+\\
+\\
+Practice expressing statements as predicates
+\\
+\\
+Let us consider a one dimensional array $b(1:n)$,
+where $1$ $\leq$ $n$. Let j and k be two 
+integer variables satisfying $1$ $\leq$ $j$ $ \leq$ $k$ $\leq$ $n$. by $b$ $(j:k)$ we mean the subarray of $b$
+consisting of $b(j), b(j+1),...b(k)$. The segment $b(j:k)$ is empty(contains no elements) if $j > k$
+\\
+\\
+Translate the sentences into predicates: 
+\\
+\\
+Homework 1.4.5.1-1
+\\
+\\
+All elements in the subarray $b(j:k)$ are positive.
+\\
+\\
+$( \forall | j \leq i \leq k : b(i) > 0)$
+\\
+\\
+Homework 1.4.5.1-2
+\\
+\\
+$\neg(\exists i| j \leq i \leq k : b(i) > 0)$
+\\
+\\
+$(\forall i | j \leq i \leq k : b(i) \leq 0)$
+\\
+\\
+Homework 1.4.6.1-3
+\\
+\\
+$\neg(\forall i| j \leq i \leq k : b(i) > 0)$
+\\
+\\
+$(\exists i| j \leq i \leq k: b(i) \leq 0)$
+\\
+\\
+Homework 1.4.6.1-4
+\\
+\\
+All elements in the subarray $b(j : k)$ are not positive.
+\\
+\\
+$\neg(\exists i| j \leq i \leq k : b(i) > 0)$
+\\
+\\
+$(\forall i| j \leq i \leq k : b(i) \leq 0)$
+\\
+\\
+Homework 1.4.6.1-5
+\\
+\\
+$(\exists i|j \leq i \leq k : b(i) > 0)$
+\\
+\\
+Homework 1.4.6.1-6
+\\
+\\
+$(\exists i|j \leq i \leq k : b(i) > 0)$
+\\
+\\
+Homework 1.4.6.1-7
+\\
+\\
+$(\exists i | j \leq i \leq k : b(i) > 0)$
+\\
+\\
+Homework 1.4.6.1-8
+\\
+\\
+$\neg(\forall i | j \leq i \leq k : b(i) > 0)$
+\\
+\\
+$(\exists i| j \leq i \leq k : b(i) \leq 0)$
+\\
+\\
+Homework 1.4.6.1-9
+\\
+\\
+$\neg(\forall i| j \leq i \leq k : b(i) > 0)$
+\\
+\\
+$(\exists i | j \leq i \leq k : b(i) \leq 0)$
+\\
+\\
+Homework 1.4.6.1-10
+\\
+\\
+It is not the case that there is an element in the subarray $b(j:k)$ that is positive.
+\\
+\\
+$\neg(\exists i| j \leq i \leq k : b(i) > 0)$
+\\
+\\
+$(\forall i | j \leq i \leq k : b(i) \leq 0)$
+\\
+\\
+Homework 1.4.6.2
+\\
+\\
+Exactly one element in the subarray $b(j:k)$ is positive.
+\\
+\\
+$(\exists i| j \leq i \leq k : b(i) > 0) \land (\forall p | j \leq p \leq k \land p \neq i : \neg (b(p) > 0)))$
+\\
+\\
+\\
+\\
+\\
+\\
+Homework 1.4.6.3-1
+\\
+\\
+\\
+\\
+A program specification is a "predicate" that describes the state of variables after the action of a program. It specifies what the program does and will be a very important first step in our work to derive programs. Write specifications for a program that...
+\\
+\\
+Sets $s$ equal to the sum of the elements of $b(j:k)$.
+\\
+\\
+$s = (\sum i|j \leq i \leq k : b(i))$
+\\
+\\
+Homework 1.4.6.3-2
+\\
+\\
+Sets $M$ equal to the maximum value in $b(j:k)$.
+\\
+\\
+$(\exists i | j \leq i \leq k : M = b(i)) \land (\forall i | j \leq i \leq k : b(i) \leq M)$
+\\
+\\
+Homework 1.4.6.3-3
+\\
+\\
+Sets I equal to the index of a maximum value $b(j : k)$.
+\\
+\\
+$(j \leq I \leq k) \land (\forall i | j \leq i \leq k : b(i) \leq b(I))$
+\\
+\\
+Homework 1.4.6.3-4
+\\
+\\
+$1 \leq x \leq n \land (\exists i | 0 \leq i : x = 2^i \land \frac{n}{2} < x \leq n)$
+\\
+\\
+$1 \leq x \leq n \land (\exists i | 0 \leq i : x = 2^i) \land \neg(\exists i | x < 2^i < n)$
+\\
+\\
+Homework 1.4.6.3-5
+\\
+\\
+Computes $c$, the number of zeroes in array $b(1:n)$.
+\\
+\\
+$(\sum i | 1 \leq i \leq n \land b(i) = 0 : 1)$
+\\
+\\
+\\
+\\
+\\
+\\
+Homework 1.4.6.3-6
+\\
+\\
+Consider array of integers $b(1:n)$. Each of its subsegments $b(i : j)$ has a sum $S_{i,j} = (\sum k | i \leq k \leq j : b(k))$. Compute $M$ equal to the maximum such sum. 
+\\
+\\
+$(\exists i, j | 1 \leq i \leq j \leq n : M = S_{i, j}) \land \neg(\exists i, j | 1 \leq i \leq j \leq n : M < S_{i, j})$
+\\
+\\
+$(\exists i, j|1 \leq i \leq j \leq n: M = S_{i,j}) \land (\forall i, j | 1 \leq i \leq j \leq n: M \geqslant S_{i, j})$
+\\
+\\
+
+
+
+\end{document}
