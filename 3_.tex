@@ -1,0 +1,265 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\begin{document}
+
+LaTex document for LAFF class notes
+\\
+\\
+Weakening/ Strengthening
+\\
+\\
+Homework 1.5.2.1
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+For each of the following, if applicable, indicate which statement is TRUE (by examination):
+\\
+\\
+1. $0 \leq x \leq 10$ is weaker than 1 $\leq x < 5.$
+\\
+\\
+2. $x = 5 \land y = 4$ is stronger than $y = 4$.
+\\
+\\
+3. $ x \leq$ 5 $\vee$ $ y = 3 $ is weaker than $x = 5 \land y = 4$.
+\\
+\\
+4. TRUE and FALSE.
+\\
+\\
+TRUE is weaker than FALSE.
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+Homework 1.5.2.2-1
+\\
+\\
+Use the Basic Equivalences to prove that:
+\\
+\\
+E1 $\land$ E2 $\Rightarrow$ E1.
+\\
+\\
+E1 $\land$ E1 $\Rightarrow$ E1
+\\
+\\ 
+$<implication>$
+\\
+\\
+$\neg$(E1 $\land$ E2) $\vee$ E1
+\\
+\\
+$<DeMorgan's>$ 
+\\
+\\
+$(\neg E1 \vee \neg E2) \vee E1$
+\\
+\\
+$<commutativity: associativity: commutativity>$
+\\
+\\
+$\neg E2 \vee (E1 \vee \neg E1)$
+\\
+\\
+$<excluded middle>$
+\\
+\\
+$\neg E2 \vee T$
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+Homework 1.5.2.2-2
+\\
+\\
+$E1 \Rightarrow E1 \vee E3$
+\\
+\\
+$<implication>$
+\\
+\\
+$\neg E1 \vee (E1 \vee E3)$
+\\
+\\
+$<associativity: commutativity>$
+\\
+\\
+$(E1 \vee \neg E1) \vee E3$
+\\
+\\
+$<excluded middle>$
+\\
+\\
+$T \vee E3$
+\\
+\\
+$<commutativity: \vee-simplification>$
+\\
+\\
+$T$
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+Homework 1.5.2.2-3
+\\
+\\
+Use the Basic Equivalence to prove that:
+\\
+\\
+$E1 \land E2 \Rightarrow E1 \vee E3$.
+\\
+\\
+$<implication>$
+\\
+\\
+$\neg(E1 \land E2) \vee (E1 \vee E3)$
+\\
+\\
+$<DeMorgan's>$
+\\
+\\
+$(\neg E1 \vee \neg E2) \vee (E1 \vee E3)$
+\\
+\\
+$<commutativity: associativity:commutativity x 2>$
+\\
+\\
+$\neg E2 \vee E3 \vee (E1 \vee \neg E1)$
+\\
+\\
+$<excluded middle>$
+\\
+\\
+$\neg E2 \vee E3 \vee T$
+\\
+\\
+$< \vee - simplification x 2>$
+\\
+\\
+$T$
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+Homework 1.5.2.3
+\\
+\\
+Use the Basic Equivalences and/or the results from Homework 1.5.2.2 to prove that:
+\\
+\\
+$E1 \land E2 \Rightarrow (E1 \vee E3) \land E2.$
+\\
+\\
+$< \land distributivity >$
+\\
+\\
+$E1 \land E2 \Rightarrow (E1 \land E2) \vee (E3 \land E2)$
+\\
+\\
+$< p \Rightarrow q \vee q>$
+\\
+\\
+$T$
+\\
+\\
+\\
+Homework 1.5.2.4
+\\
+\\
+Consider the three Weakening/Strengthening Laws: 
+\\
+\\
+Weakening/Strengthening:
+\\
+\\
+$((E1 \land E2) \Rightarrow E1) \Leftrightarrow T$
+\\
+\\
+$(E1 \Rightarrow (E1 \vee E2)) \Leftrightarrow T$
+\\
+\\
+$((E1 \land E2) \Rightarrow (E2 \vee E3)) \Leftrightarrow T$
+\\
+\\
+This exercise shows that if you only decide to remember one, it should be the last one.
+\\
+\\
+To show that $(E1 \land E2) \Rightarrow E1$ is a special case of $(E1 \land E2) \Rightarrow (E1 \vee E3)$ set $E3$ to :
+\\
+\\
+FALSE
+\\
+\\
+To show that $E1 \Rightarrow (E1 \vee E3)$ is a special case of $(E1 \land E2) \Rightarrow (E1 \vee E3)$ set $E2$ to : 
+\\
+\\
+TRUE
+\\
+\\
+
+\end{document}
