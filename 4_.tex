@@ -1,0 +1,180 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{The Hoare Triple}
+\author{Krystal Maughan }
+\date{April 2017}
+
+\begin{document}
+
+\maketitle
+
+\section{The Hoare Triple}
+The Hoare triple
+$\left\{Q\right\}$ $S$ $\left\{R\right\}$
+holds if and only if $S$
+, when executed
+starting in a state that satisfies
+predicate $Q$,
+completes in a finite 
+amount of time in a state
+that satisfies predicate $R$.
+\\
+\\
+Homework 2.2.2.1
+\\
+\\
+By examination, decide whether the following Hoare triples
+\\
+hold (evaluate to TRUE) and which of the predicates 
+\\
+are stronger / weaker:
+\\
+\\
+\\
+1. $\left\{x > 4\right\}$ $y := x + 1$ $\left\{y > 5\right\}$
+\\
+\\
+TRUE
+\\
+\\
+\\
+\\
+2. $\left\{x = 10\right\}$ $ y:= x + 1$ $\left\{y > 5\right\}$
+\\
+\\
+TRUE
+\\
+\\
+$x = 10$ is stronger than $x > 4$
+\\
+\\
+TRUE
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+3. $\left\{x = 5\right\}$ $y := x + 1$ $\left\{y > 5\right\}$
+\\
+\\
+TRUE
+\\
+\\
+$ x > 4 $ is weaker than $ x = 5$
+\\
+\\
+TRUE
+\\
+\\
+\\
+\\
+\\
+4. $\left\{x \geq 5\right\}$ $y := x + 1$ $\left\{y > 5\right\}$
+\\
+\\
+TRUE
+\\
+\\
+$x > 4$ is at least as weak as $ x \geq 4$
+\\
+\\
+TRUE
+\\
+\\
+\\
+\\
+\\
+\\
+5. $\left\{x = 4\right\}$ $y :=x + 1$ $\left\{y > 5\right\}$
+\\
+\\
+FALSE
+\\
+\\
+$x > 4$ is weaker than $ x = 4$
+\\
+\\
+FALSE
+\\
+\\
+\\
+\\
+6. $\left\{x \geq 4\right\}$ $y := x + 1$ $\left\{y > 5\right\}$
+\\
+\\
+FALSE
+\\
+\\
+$x > 4$ is weaker than $ x \geq 4$
+\\
+\\
+FALSE
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+7. $\left\{x > 4\right\}$ $y := x + 1$ $\left\{y > 5\right\}$
+\\
+\\
+TRUE
+\\
+\\
+$y \geq 5$ is weaker than $y > 5$
+\\
+\\
+TRUE
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\section{The Hoare Triple Homework 2.2.2.2}
+
+Homework 2.2.2.2
+\\
+\\
+\\
+\\
+What do you notice about the relationship
+\\
+\\
+between the preconditions, $P$, that make the 
+\\
+\\
+Hoare triple
+\\
+\\
+$\left\{P\right\}$ $y := x + 1$ $\left\{y > 5\right\}$
+\\
+\\
+TRUE and the predicate $x > 4$?
+\\
+\\
+Of all $P$ for which the Hoare triple holds 
+\\
+\\
+(evaluates to TRUE), $x > 4$ is the weakest.
+\\
+\\
+
+
+\end{document}
