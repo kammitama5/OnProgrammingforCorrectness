@@ -1,0 +1,107 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{The Hoare Triple}
+\author{Krystal Maughan }
+\date{April 27th 2017}
+
+\begin{document}
+
+\maketitle
+
+\section{The Hoare Triple}
+Homework 2.3.11
+\\
+\\
+Consider the skip command, which simply doesn't do anything:
+\\
+\\
+ $\left\{Q : ?\right\}$
+\\
+\\
+skip
+\\
+\\
+$\left\{R : x > 4\right\}$
+\\
+\\
+From what state Q will the command skip finish?
+\\
+\\
+(in a finite amount of time) in a state
+\\
+\\ where $ x > 4$ is TRUE?
+\\
+\\
+In other words
+\\
+\\
+wp("skip", $x > 4$) = 
+\\
+\\
+$x > 4$
+\\
+\\
+Explanation:
+This is like the precondition for a loop.
+$x$ must be more than 4 for the loop to begin (or end)
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+Homework 2.3.1.2
+\\
+\\
+Building on the last homework,
+\\
+consider the general case
+\\
+\\
+$\left\{Q : ?\right\}$
+\\
+skip
+\\
+$\left\{R\right\}$
+\\
+\\
+From what STATE will the command skip finish
+\\
+\\
+(in a finite amount of time) 
+\\
+\\
+in a state where $R$ is TRUE?
+\\
+\\
+In other words
+\\
+\\
+wp("skip", R) = 
+\\
+\\
+R
+\\
+\\
+Explanation: 
+For a loop to commence or end,
+\\
+\\
+it has to be in state R if R is the condition 
+\\
+\\
+that must be satisfied to put the loop into motion
+\\
+\\
+(or stop the loop).
+
+
+
+
+\end{document}
