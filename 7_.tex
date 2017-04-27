@@ -1,0 +1,100 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{The Hoare Triple}
+\author{Krystal Maughan }
+\date{April 2017}
+
+\begin{document}
+
+\maketitle
+
+\section{The Hoare Triple : Abort (Specific Case)}
+Consider the abort command, which aborts
+$\left\{Q : ? \right\}$ 
+\\
+\\
+abort
+\\
+\\
+$\left\{R : x > 4 \right\}$ 
+\\
+\\
+From what state Q will the command abort finish
+\\
+\\
+in a state where $x > 4$ is TRUE?
+\\
+\\
+In other words
+\\
+\\
+wp("abort", $x > 4$) = 
+\\
+\\
+FALSE
+\\
+\\
+Explanation:
+\\
+\\
+The key in this is that $x > 4$ is TRUE.
+\\
+\\
+Therefore the condition is true, and the loop continues
+\\
+\\
+Therefore it cannot abort. 
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\section{The Hoare Triple : Abort (General Case)}
+Homework 2.3.2.2
+\\
+\\
+(General Case)
+\\
+\\
+Building on the last homework, consider the general case
+\\
+\\
+$\left\{Q : ? \right\}$
+\\
+\\
+abort
+\\
+\\
+$\left\{R \right\}$
+\\
+\\
+From what state Q will the command abort finish
+\\
+\\
+in a state where R is TRUE?
+\\
+\\
+In other words
+\\
+\\
+wp("abort", R) = 
+\\
+\\
+FALSE
+\\
+\\
+Explanation: As above, as long as R is true
+\\
+\\
+The command abort cannot occur.
+ 
+
+
+\end{document}
