@@ -1,0 +1,60 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\DeclareMathAlphabet{\mathpzc}{OT1}{pzc}{m}{it}
+\title{The Hoare Triple}
+\author{Krystal Maughan }
+\date{April 2017}
+
+\begin{document}
+
+\maketitle
+
+\section{The Hoare Triple : Assignment to a Simple Variable}
+Homework 2.3.3.1
+\\
+\\
+Prove the following code segment correct
+\\
+\\
+$\left\{Q : s = 0 \land 0 \leq n \right\}$ 
+\\
+\\
+$ S : k: = 0$
+\\
+\\
+$\left\{R : s = (\Sigma i | 0 \leq i < k : b(i)) \land 0 \leq k \leq n \right\}$
+\\
+\\
+$Q \Rightarrow $ $wp("S", R)$
+\\
+\\
+$<$ instantiate $S$ and $R$ $>$
+\\
+\\
+$Q \Rightarrow$ $wp("k := 0", s = $ $(\Sigma i | 0 \leq i < k : b(i)) \land 0 \leq k \leq n)$
+\\
+\\
+$<$ definition of wp(: =) $>$
+\\
+\\
+$Q \Rightarrow$ $( s = {(\Sigma i | 0 \leq i < k : b(i)) \land 0 \leq  k \leq n)}_{(0)}^{k}$
+\\
+\\
+$<$ definition of ${R}_{\mathpzc{E}}^{k}$ $>$
+\\
+\\
+$Q \Rightarrow $ ($s = (\Sigma i | 0 \leq i < 0 : b(i)) \land 0 \leq 0 \leq n)$
+\\
+\\
+$<$ instantiate $Q$; sum over empty range; algebra $>$
+\\
+\\
+$(s = 0 \land 0 \leq n) \Rightarrow (s = 0 \land 0 \leq n)$
+\\
+\\
+$<$ $\Rightarrow -$simplification $>$
+\\
+\\
+T
+
+\end{document}
