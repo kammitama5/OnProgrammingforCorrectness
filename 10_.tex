@@ -1,0 +1,102 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\DeclareMathAlphabet{\mathpzc}{OT1}{pzc}{m}{it}
+\title{The Hoare Triple}
+\author{Krystal Maughan }
+\date{April 28th 2017}
+
+\begin{document}
+
+\maketitle
+
+\section{The Hoare Triple : Composition}
+Compositions are typically  represented as \( f \circ g \).
+(Read as f of g). They are also typically non-commutative.
+\\
+\\
+Functions that are invertible are isomorphic.
+\\
+\\
+ie. Each element in one group can be mapped to an element
+\\
+in another group $\rightarrow$ one to one.
+Injective and Surjective
+\\
+at the same time = isomorphic.
+\section{Homework 2.3.4.1-1}
+Compute wp("$i := i - 1$", $i \geq 0$).
+\\
+\\
+$i - 1 \geq 0$
+\\
+\\
+$ i \geq 1$
+\\
+\\
+$ i > 0$
+\\
+\\
+\section{Homework 2.3.4.1-2}
+Compute wp("$i : = i + 1$", $i = j$).
+\\
+\\
+$j = i + 1$
+\\
+\\
+\\
+\section{Homework 2.3.4.1-3}
+Compute wp("$i : = i + 1; j : = j + i$", $i = j$).
+\\
+\\
+$j = 0$
+\\
+\\
+\section{Homework 2.3.4.1-4}
+Compute wp("$i : 2i + 1; j := j + i$", $i = j$).
+\\
+\\
+$j = 0$
+\\
+\\
+\section{Homework 2.3.4.1-5}
+Compute wp("$j : = j + i; i : = 2i + 1$", $i = j$).
+\\
+\\
+$j = i + 1$
+\\
+\\
+$ i = j - 1$
+\\
+\\
+\section{Homework 2.3.4.1-6}
+Compute wp("$t : = i; i : = j; j : = t$", $i = \hat{i}$ $\land$ $j = \hat{j}$
+\\
+\\
+$i = $ $ \hat{j}$ $\land$ $ j = $ $ \hat{i}$
+\\
+\\
+\section{Homework 2.3.4.1-7}
+Compute wp("$i : = 0; s : = 0$", $0 \leq i < n \land s = $ ($\Sigma j | 0 \leq j < i : b(j)))$.
+\\
+\\
+$ 0 < n$
+\\
+\\
+$ 0 \leq 0 < n \land 0 = $ ($\Sigma j | 0 \leq j < 0 : b(j))$
+\\
+\\
+\\
+\\
+\section{Homework 2.3.4.1-8}
+Compute wp("$s : = s + b(i); i : i + 1$", $0 \leq i \leq n \land s = $ ($\Sigma j | 0 \leq j < i : b(j)))$.
+\\
+\\
+$0 \leq i + 1 \leq n \land s + b(i) = $ ($\Sigma j | 0 \leq j < i + 1 : b(j))$
+\\
+\\
+$0 \leq i + 1 \leq n \land s = $ ($\Sigma j | 0 \leq j < i : b(j)$)
+\\
+\\
+\end{document}

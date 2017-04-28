@@ -1,0 +1,149 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\DeclareMathAlphabet{\mathpzc}{OT1}{pzc}{m}{it}
+\title{The Hoare Triple}
+\author{Krystal Maughan }
+\date{April 28th 2017}
+
+\begin{document}
+
+\maketitle
+
+\section{The Hoare Triple : Simultaneous Assignment}
+Problems in Simultaneous Assignment
+\\
+\\
+\section{Homework 2.3.5.1}
+Evaluate
+\\
+\\
+wp("$i : = i + 1; j : = 2i$" , $2i = j$)
+\\
+\\
+TRUE
+\\
+\\
+wp("$j : 2i; i : = i + 1$", $2i = j$)
+\\
+\\
+FALSE
+\\
+\\
+wp("$i, j : = i + 1, 2i$", $2i = j$)
+\\
+\\
+FALSE
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\section{Homework 2.3.5.2}
+Prove the following code segment correct. 
+\\
+It swaps the values of variables x and y.
+\\
+\\
+$\left\{Q: x = \hat{x} \land (y = \hat{y}\right\}$
+\\
+$S : x, y : = y , x$
+\\
+$\left\{R: x = \hat{y} \land (y = \hat{x}\right\}$
+\\
+\\
+$Q \Rightarrow wp("S", R)$
+\\
+\\
+$<$ Instantiate S and R $>$
+\\
+\\
+$Q \Rightarrow wp("x, y : = y, x", (x = \hat{y}) \land (y = \hat{x}))$
+\\
+\\
+$<$ Definition of $wp(: =,) >$
+\\
+\\
+$Q \Rightarrow {(( x = \hat{y}) \land (y = \hat{x})}_{(y),(x)}^{x, y}$
+\\
+\\
+$<$ Instantiate $Q$, definition of $R_{(y),(x)}^{x,y} >$
+\\
+\\
+$((x = \hat{x} \land (y = \hat{y})) \Rightarrow ((y = \hat{y}) \land (x = \hat{x}))$
+\\
+\\
+$<$ $\land$-commutivity; $\Rightarrow$-simplification $>$
+\\
+\\
+T
+\\
+\\
+\section{Homework 2.3.5.3}
+Evaluate
+\\
+\\
+wp($i : = 2i + j; j : = i + 2j + 4$", $i = j$)
+\\
+\\
+$<$ definition of $: = $ $>$
+\\
+\\
+wp("$i : = 2i + j$", $i = i + 2j + 4$)
+\\
+\\
+$<$ definition of $: = $ $>$
+\\
+\\
+wp("$i : = 2i + j$", $i = i + 2j + 4$)
+\\
+\\
+simplification $\rightarrow$ $j = -2$
+\\
+\\
+\\
+\\
+Evaluate
+\\
+\\
+wp("$j : = i + 2j + 4; i : = 2i + j$", $i = j$)
+\\
+\\
+$<$ definition of $: = $ $>$
+\\
+\\
+wp("$j : = i + 2j + 4$", $2i + j = j$)
+\\
+\\
+$<$ definition of $: = $ $>$
+\\
+\\
+$2i + (i + 2j + 4) = i + 2j + 4$
+\\
+\\
+simplification $\Rightarrow i = 0$
+\\
+\\
+\\
+\\
+\\
+\\
+Evaluate
+\\
+\\
+wp("$i, j: = 2i + j, i + 2j + 4$", $i = j$)
+\\
+\\
+$<$ definition of $: = $ $>$
+\\
+\\
+$2i + j = i + 2j + 4$
+\\
+\\
+simplification $\Rightarrow i = j + 4$
+\end{document}
