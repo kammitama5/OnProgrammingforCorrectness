@@ -1,0 +1,42 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+
+\author{Krystal Maughan }
+\date{April 28th 2017}
+
+\begin{document}
+
+\section{The Hoare Triple : The If Theorem}
+Homework 2.4.3.3
+\\
+\\
+The following code segment might be part 
+\\
+of a loop that computes $m$, the minimum
+\\
+value in array $b$:
+\\
+\\
+1. $\left\{Q: ( \forall j | 1 \leq j < i : m \leq b (j)) \land 0 \leq i \leq n \right\}$ 
+\\
+if
+\\
+$b(i) \geq m \rightarrow $ skip
+\\
+$b(i) \leq m \rightarrow m := b(i)$
+\\
+fi
+\\
+$i := i + 1$
+\\
+$\left\{R: ( \forall j | 1 \leq j < i : m \leq b (j)) \land 0 \leq i \leq n \right\}$ \\
+\\
+Which of the following are part of the proof of correctness of this if command?
+\\
+\\
+$( \forall j | 1 \leq j < i : m \leq b (j)) \land 0 \leq i < n \rightarrow b(i) \geq m \vee b(i) \leq m$
+\\
+\\
+$( \forall j | 1 \leq j < i : m \leq b(j)) \land 0 \leq i < n \land b \geq m \rightarrow wp("skip", (\forall j | 1 \leq j < i + 1 : m \leq b(j)) \land 0 \leq i + 1 \leq n)$
+\end{document}
