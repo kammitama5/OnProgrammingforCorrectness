@@ -1,0 +1,65 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\DeclareMathAlphabet{\mathpzc}{OT1}{pzc}{m}{it}
+\title{The Hoare Triple}
+\date{May 3rd 2017}
+\DeclareMathAlphabet{\mathpzc}{OT1}{pzc}{m}{it}
+
+\begin{document}
+
+\maketitle
+
+\section{cont'd}
+$\mathbf{Homework}$  $\mathbf{3.2.3.1}$
+\\
+Find the missing assignment to make the following programme segment correct.
+\\
+\\
+$\left\{Q : 0 < i < n\right\}$
+\\
+$i, j := i + 1, ?$
+\\
+$\left\{R : j = n - 1 \land 0 \leq j < n \right\}$
+\\
+\\
+Ans: $j := n - i - 1$
+\\
+\\
+$\mathbf{Homework}$  $\mathbf{3.2.3.2}$
+\\
+Find the missing assignment to make the following programme segment correct.
+\\
+\\
+$\left\{Q : 0 < i < n\right\}$
+\\
+$ i := i + 1$
+\\
+$ j := ?$
+\\
+$\left\{R : j = n - 1 \land 0 \leq j < n \right\}$
+\\
+\\
+Ans: $ j := n - i$
+\\
+\\
+$\mathbf{Homework}$  $\mathbf{3.2.3.3}$
+\\
+Find the missing assignment to make the following programme segment correct.
+\\
+\\
+$\left\{Q : 0 < i < n\right\}$
+\\
+$ j := ? $
+\\
+$ i := i + 1 $
+\\
+$\left\{R : j = n - 1 \land 0 \leq j < n\right\}$
+\\
+\\
+Ans: $ j := n - i - 1$
+\\
+\\
+
+\end{document}
