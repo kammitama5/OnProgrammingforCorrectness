@@ -1,0 +1,53 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\DeclareMathAlphabet{\mathpzc}{OT1}{pzc}{m}{it}
+\title{The Hoare Triple}
+\author{Krystal Maughan }
+\date{May 3rd 2017}
+
+\begin{document}
+
+\maketitle
+
+\section{Summing the Elements of an Array}
+Homework 3.1.1.1
+\\
+\\
+$\left\{0 \leq n\right\}$
+\\
+$k := n$
+\\
+$s := 0$
+\\
+$\left\{ s = (\Sigma i | k \leq i < n : b(i)) \land 0 \leq k < n\right\}$
+\\
+\\
+while $ 0 < k $ do 
+\\
+\\
+$\left\{ s = (\Sigma i | k \leq i < n : b(i)) \land 0 \leq k < n\land (0 < k) \right\}$
+\\
+\\
+$k := k - 1$
+\\
+\\
+$s := s + b(k)$
+\\
+\\
+$\left\{ s = (\Sigma i | k \leq i < n : b(i)) \land 0 \leq k < n\right\}$
+\\
+\\
+endwhile
+\\
+\\
+$\left\{ s = (\Sigma i | k \leq i < n : b(i)) \land 0 \leq k <  \land (\neg(0 < k))\right\}$
+\\
+\\
+$\left\{ s = (\Sigma i | 0 \leq i < n : b(i)) \right\}$
+\\
+\\
+
+
+\end{document}
