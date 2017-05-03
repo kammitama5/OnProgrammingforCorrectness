@@ -1,0 +1,57 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\DeclareMathAlphabet{\mathpzc}{OT1}{pzc}{m}{it}
+\title{The Hoare Triple}
+\author{Krystal Maughan }
+\date{May 3rd 2017}
+\DeclareMathAlphabet{\mathpzc}{OT1}{pzc}{m}{it}
+
+\begin{document}
+
+\maketitle
+
+\section{Assignment to simple variables}
+$\mathbf{Homework}$  $\mathbf{3.2.2.1}$
+\\
+\\
+Consider the code segment
+\\
+\\
+$\left\{Q : (s = \hat{s}) \land (t = \hat{t})\right\}$
+\\
+$s, t : = \mathpzc{E}_{0}, \mathpzc{E}_{1}$
+\\
+$\left\{R : (s = \hat{t}) \land (t = \hat{s})\right\}$
+\\
+\\
+Systematically derive the correct assignment and then pick the correct update below:
+\\
+\\
+$s, t := t, s$
+\\
+\\
+$\mathbf{Homework}$  $\mathbf{3.2.2.2}$
+\\
+\\
+Find the missing assignment to make the following programme segment correct.
+\\
+\\
+$\left\{Q : 0 < n\right\}$
+\\
+$i, fac := n, ?$
+\\
+$\left\{R : 1 \leq i \leq n \land fac = (\prod j | i \leq j < n : j)\right\}$
+\\
+\\
+$i, fac := n, 1$
+\\
+\\
+$\mathbf{Homework}$  $\mathbf{3.2.2.3}$
+\\
+\\
+$y := b(i - 1) \times 2^{i - 1} + y$
+
+
+\end{document}
