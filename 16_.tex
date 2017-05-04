@@ -1,0 +1,51 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+
+\author{Krystal Maughan }
+\date{May 4th 2017}
+
+\begin{document}
+
+\section{Disjunctive Conjunction}
+$\mathbf{Homework 3.3.2.1}$
+\\
+\\
+Pick the predicate that best describes the operation:
+\\
+1.$ (x \leq 0 \land c = \hat{c} + 1) \vee (x > 0 \land c = \hat{c})$
+\\
+2.$ (x \leq y \land z = y) \vee (x \geq y \land z = x)$
+\\
+3.$ (x \leq y \land z = x) \vee (x \geq y \land z = y)$
+\\
+4.$ (x \geq 0 \land z = x) \vee (x \leq 0 \land z = -x)$
+\\
+5.$ (x \geq y \land z = x - y) \vee (y \geq x \land z = y - x)$
+\\
+\\
+3.3.2.1-1: $z = abs(x)$
+\\
+$(x \geq 0 \land z = x) \vee (x \leq 0 \land z = -x)$
+\\
+\\
+3.3.2.1-2: $z = min(x, y)$
+\\
+$(x \leq y \land z = x) \vee (x \geq y \land z = y)$
+\\
+\\
+3.3.2.1-3: $z = max(x, y)$
+\\
+$(x \leq y \land z = y) \vee (x \geq y \land z = x)$
+\\
+\\
+3.3.2.1-4: $z = abs(x - y)$
+\\
+$(x \geq y \land z = x - y) \vee (y \geq x \land z = y - x)$
+\\
+\\
+3.3.2.1-5: Increment $c$ by one if $ x \leq 0$
+\\
+$(x \leq 0 \land c = \hat{c} + 1) \vee (x > 0 \land c = \hat{c})$
+
+\end{document}
