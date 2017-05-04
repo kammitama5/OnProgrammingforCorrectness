@@ -1,0 +1,68 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+
+\author{Krystal Maughan }
+\date{May 4th 2017}
+
+\begin{document}
+
+\section{Evaluating Polynomial Function}
+$\mathbf{Homework}$ $\mathbf{3.5.2.1}$
+\\
+\\
+Derive the correct loop guard $G$ from:
+\\
+$\left\{P_{inv} \land \neg G : y = (\Sigma i | k \leq i \leq n : p(i)x^{i - k}) \land 1 \leq k \leq n + 1 \land \neg G\right\}$
+\\
+$\left\{ R : (\Sigma i | 1 \leq i \leq n : p(i) x^{i - 1})\right\}$
+\\
+\\
+$ 1 < k$
+\\
+$k \neq 1$
+\\
+\\
+$\mathbf{Homework}$ $\mathbf{3.5.2.2}$
+\\
+\\
+Indicate which of the following is a correct initialization for:
+\\
+$\left\{ Q : 0 \leq n\right\}$
+\\
+$k : = $
+\\
+$ y : = $
+\\
+$\left\{P_{inv} : y = (\Sigma i | k \leq i \leq n : p(i) x^{i - k}) \land 1 \leq k \leq n + 1\right\}$
+\\
+\\
+$k := n$
+\\
+$y := p(n)$
+\\
+\\
+$k := n + 1$
+\\
+$y := 0$
+\\
+\\
+$\mathbf{Homework}$ $\mathbf{3.5.2.3}$
+\\
+\\
+Indicate which is the correct initialization from:
+\\
+$\left\{P_{inv} \land G: y = (\Sigma i | k \leq i \leq n : p(i) x^{i - k}) \land 1 \leq k \leq n + 1 \land 1 < k\right\}$
+\\
+$k := k - 1$
+\\
+$y := ...$
+\\
+$\left\{P_{inv} : y = (\Sigma i | k \leq i \leq n : p(i) x^{i - k}) \land 1 \leq k \leq n + 1\right\}$
+\\
+\\
+$k := k - 1$
+\\
+$y := p(k) + y \times x$
+
+\end{document}
