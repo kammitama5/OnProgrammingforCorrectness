@@ -1,0 +1,100 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\DeclareMathAlphabet{\mathpzc}{OT1}{pzc}{m}{it}
+\title{Abstraction}
+\date{May 10th 2017}
+\DeclareMathAlphabet{\mathpzc}{OT1}{pzc}{m}{it}
+
+\begin{document}
+
+\maketitle
+
+\section{Homework 4.1.1.1-1}
+Match the predicate with the corresponding predicate:
+\\
+\\
+1.) $d = (\Sigma i | 0 \leq i < n : x(i) \times y(i))$
+\\
+\\
+Ans:
+\\
+$d = x^{T}y$
+\\
+\\
+2.) $d = (\Sigma i | 0 \leq i < k : x(i) \times y(i)) + (\Sigma i | k \leq i < n : x(i) \times y(i)) \land 0 \leq k \leq n$
+\\
+\\
+Ans:
+\\
+$d = x^{T}_{T} y_{T} + x^{T}_{B}$ $y_{B}$
+\\
+\\
+3.) $d = (\Sigma i | 0 \leq i < k : x(i) \times y(i)) \land 0 \leq k \leq n$
+\\
+\\
+Ans:
+\\
+$d = x^{T}_{T}$ $y_{T}$
+\\
+\\
+4.) $d = (\Sigma i | k \leq i < n : x(i) \times y(i)) \land 0 \leq k \leq n$
+\\
+\\
+Ans:
+\\
+$d = x^{T}_{B}$ $y_{B}$
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\section{Homework 4.1.1.1-2}
+Complete the dot product annotated algorithm:
+\\
+\\
+$\lbrace (0 \leq n)\rbrace$
+\\
+\\
+$k := 0$
+\\
+\\
+$ x \rightarrow \left(\frac{x_{T}}{x_{B}}\right)$ and $y \rightarrow \left(\frac{y_{T}}{y_{B}}\right)$, where $x_{T}$ and $y_{T}$ have no elements.
+\\
+\\
+$d := 0$
+\\
+\\
+$\lbrace (\forall i | 0 \leq i < k : x(i) \times y(i)) \land (0 \leq k \leq n) \rightarrow d = x^{T}_{T}$ $y_{T}\rbrace$
+\\
+\\
+while $k < n$ do
+\\
+\\
+$\lbrace d = (\forall i | 0 \leq i < k : x(i) \times y(i)) \land (0 \leq k \leq n) \land (k < n) \rightarrow d = x^{T}_{T}y_{T} \rbrace$
+\\
+\\
+$d := d + x(k) \times y(k)$
+\\
+\\
+$k := k + 1$
+\\
+\\
+$\lbrace d = (\forall i | 0 \leq i < k : x(i) \times y(i)) \land (0 \leq k \leq n) \rightarrow d = x^{T}_{T} y_{T}\rbrace$
+\\
+\\
+endwhile
+\\
+\\
+$\lbrace d = (\forall i | 0 \leq i < k : x(i) \times y(i)) \land (0 \leq k \leq n) \land \neg(k < n) \rightarrow d = x^{T}_{T} y_{T}\rbrace$
+\\
+\\
+$\lbrace d = (\Sigma i | 0 \leq i < n : x(i) \times y(i)) \rightarrow d = x^{T} y$
+
+
+
+\end{document}
