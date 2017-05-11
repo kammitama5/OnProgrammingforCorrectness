@@ -1,0 +1,52 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\DeclareMathAlphabet{\mathpzc}{OT1}{pzc}{m}{it}
+\title{Matrix Vector Operations}
+\date{May 11th 2017}
+\DeclareMathAlphabet{\mathpzc}{OT1}{pzc}{m}{it}
+
+\begin{document}
+
+\maketitle
+
+\section{Notation Cont'd}
+$\mathbf{Homework}$  $\mathbf{4.2.1.1}$
+\\
+Annotated algorithm copying vector x into vector y
+\\
+\\
+$\left\{(\forall i | 0 \leq i < n : y(i) = \hat{y}(i)) \land (0 \leq n)\right\}$   $\rightarrow $ $y = \hat{y}$
+\\
+\\
+$k := 0$ 
+\\
+\\
+$x \rightarrow (\frac{{x}_{T}}{x_{B}})$ and $y \rightarrow (\frac{{y}_{T}}{y_{B}})$ where $x_{T}$ and $y_{T}$ are empty.
+\\
+\\
+$\lbrace (\forall i | 0 \leq i < k : y(i) = x(i)) \land
+(\forall i | k \leq i < n : y(i) = \hat{y}(i)) \land (0 \leq k \leq n)$ $\rightarrow (\frac{y_{T}}{y_{B}}) = (\frac{x_{T}}{\hat{y}_{B}})\rbrace$
+\\
+\\
+while $m(y_{T}) < m(y)$
+\\
+\\
+$\lbrace P_{inv} \land (k < n) :$
+\\
+$(\forall i | 0 \leq i < k : y(i) = x(i)) \land$
+\\
+$(\forall i | k \leq i < n : y(i) = \hat{y}(i)) \land (0 \leq k \leq n) \land (k < n)$
+\\
+$y \rightarrow (\frac{{y}_{T}}{y_{B}}) = (\frac{{x}_{T}}{\hat{y}_{B}}) \land m(y_{T}) < m(y)\rbrace$
+\\
+\\
+$(\frac{{x}_{T}}{x_{B}}) \rightarrow$ $\begin{bmatrix}
+x_{0}
+\\
+\chi_{1}
+\\
+x_{2}
+\end{bmatrix}$
+\end{document}
